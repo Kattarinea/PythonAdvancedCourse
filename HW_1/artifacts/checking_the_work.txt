@@ -1,0 +1,179 @@
+nl_command('artifacts/test.txt'):
+
+1  [Verse 1]
+2  Gimme, gimme, gimme some time to think
+3  I'm in the bathroom, looking at me
+4  Face in the mirror is all I need (Ooh-ooh)
+5  Wait until the reaper takes my life
+6  Never gonna get me out alive
+7  I will live a thousand million lives (Ooh-ooh)
+8  
+9  [Pre-Chorus]
+10  My patience is waning, is this entertaining?
+11  Our patience is waning, is this entertaining?
+12  
+13  [Chorus]
+14  I-I-I got this feeling, yeah, you know
+15  Where I'm losing all control
+16  'Cause there's magic in my bones
+17  I-I-I got this feeling in my soul
+18  Go ahead and throw your stones
+19  'Cause there's magic in my bones
+20  
+21  [Verse 2]
+22  Playin' with a stick of dynamitе
+23  There was nevеr gray in black and white
+24  There was never wrong 'til there was right (Ooh-ooh)
+25  Feelin' like a boulder hurtlin'
+26  Seein' all the vultures circlin'
+27  Burnin' in the flames, I'm workin' in
+28  Turnin' in a bed, that's darkenin'
+29  You might also like
+30  Symphony
+31  Imagine Dragons
+32  I Don’t Like Myself
+33  Imagine Dragons
+34  SHOOTING STAR
+35  XG
+36  [Pre-Chorus]
+37  My patience is waning, is this entertaining?
+38  Our patience is waning, is this entertaining?
+39  
+40  [Chorus]
+41  I-I-I got this feeling, yeah, you know
+42  Where I'm losing all control
+43  'Cause there's magic in my bones (In my bones)
+44  I-I-I got this feeling in my soul
+45  Go ahead and throw your stones
+46  'Cause there's magic in my bones
+----------------------------------------------------------------------------------------
+
+nl_command():
+
+one
+1  one
+two
+2  two
+three four
+3  three four
+
+4  
+five
+5  five
+^D
+Ctrl+D was pressed
+------------------------------------------------------------------------------------------
+
+tail_command('artifacts/test.txt'):
+
+My patience is waning, is this entertaining?
+Our patience is waning, is this entertaining?
+
+[Chorus]
+I-I-I got this feeling, yeah, you know
+Where I'm losing all control
+'Cause there's magic in my bones (In my bones)
+I-I-I got this feeling in my soul
+Go ahead and throw your stones
+'Cause there's magic in my bones
+------------------------------------------------------------------------------------------
+
+tail_command('artifacts/test.txt', 'artifacts/test2.txt'):
+
+==> artifacts/test.txt <==
+My patience is waning, is this entertaining?
+Our patience is waning, is this entertaining?
+
+[Chorus]
+I-I-I got this feeling, yeah, you know
+Where I'm losing all control
+'Cause there's magic in my bones (In my bones)
+I-I-I got this feeling in my soul
+Go ahead and throw your stones
+'Cause there's magic in my bones
+
+
+==> artifacts/test2.txt <==
+one
+two
+three, four, five
+six, seven
+------------------------------------------------------------------------------------------
+
+tail_command():
+
+First things first
+I'ma say all the words inside my head
+I'm fired up and tired of
+The way that things have been, oh-ooh
+The way that things have been, oh-ooh
+Second things second
+Don't you tell me what you think that I could be
+I'm the one at the sail
+I'm the master of my sea, oh-ooh
+The master of my sea, oh-ooh
+
+I was broken from a young age
+Taking my sulkin' to the masses
+Writing my poems for the few
+That look at me, took to me, shook at me, feelin' me
+Singing from heartache from the pain
+Taking my message from the veins
+Speaking my lesson from the brain
+Seeing the beauty through the...
+
+Pain! You made me a, you made me a
+Believer, believer
+Pain! You break me down, you build me up
+Believer, believer
+Pain! Oh, let the bullets fly, oh, let them rain
+My life, my love, my drive, it came from…
+Pain! You made me a, you made me a
+Believer, believer
+^D
+Ctrl+D was pressed
+I was broken from a young age
+Taking my sulkin' to the masses
+Writing my poems for the few
+That look at me, took to me, shook at me, feelin' me
+Singing from heartache from the pain
+Taking my message from the veins
+Speaking my lesson from the brain
+Seeing the beauty through the...
+
+Pain! You made me a, you made me a
+Believer, believer
+Pain! You break me down, you build me up
+Believer, believer
+Pain! Oh, let the bullets fly, oh, let them rain
+My life, my love, my drive, it came from…
+Pain! You made me a, you made me a
+Believer, believer
+------------------------------------------------------------------------------------------
+
+wc_command('artifacts/test.txt'):
+
+46 219 1301 artifacts/test.txt
+------------------------------------------------------------------------------------------
+
+wc_command('artifacts/test2.txt'):
+
+4 7 39 artifacts/test2.txt
+------------------------------------------------------------------------------------------
+
+wc_command('artifacts/test.txt', 'artifacts/test2.txt'):
+
+46 219 1301 artifacts/test.txt
+4 7 39 artifacts/test2.txt
+50 226 1340 total
+------------------------------------------------------------------------------------------
+
+wc_command()
+
+one two
+three four
+five
+^D
+Ctrl+D was pressed
+3 5 24
+
