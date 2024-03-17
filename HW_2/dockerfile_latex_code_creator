@@ -1,7 +1,0 @@
-FROM python:3.9
-
-RUN pip install --no-cache-dir LaTeX_code_create
-
-WORKDIR /app
-
-CMD ["python3", "generate_latex.py"]
