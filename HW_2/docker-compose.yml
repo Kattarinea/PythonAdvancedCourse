@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  latex_code_creator:
+    build:
+      context: .
+      dockerfile: dockerfile_latex_code_creator
+    volumes:
+      - ./docker_folder:/app/
+    depends_on:
+      - miktex
+  miktex:
+    build:
+      context: .
+      dockerfile: dockerfile_miktex
+    volumes:
+      - ./docker_folder:/app/
+      - ./artifacts:/miktex/work
+    environment:
+      - MIKTEX_USERCONFIG=/miktex/.miktex/texmfs/config
+      - MIKTEX_USERDATA=/miktex/.miktex/texmfs/data
+      - MIKTEX_USERINSTALL=/miktex/.miktex/texmfs/install
+    command: pdflatex /app/table_and_pic.tex
+
+
+volumes:
+  miktex:

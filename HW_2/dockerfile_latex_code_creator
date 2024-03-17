@@ -1,0 +1,10 @@
+FROM python:3.9
+
+# Установка библиотеки LaTeX_code_create
+RUN pip install --no-cache-dir LaTeX_code_create
+
+# Копирование скрипта генерации LaTeX и изображения
+WORKDIR /app
+
+# Запуск скрипта по умолчанию
+CMD ["python3", "generate_latex.py"]
