@@ -1,4 +1,4 @@
-nl_command('artifacts/test.txt'):
+-nl test.txt :
 
 1  [Verse 1]
 2  Gimme, gimme, gimme some time to think
@@ -48,7 +48,7 @@ nl_command('artifacts/test.txt'):
 46  'Cause there's magic in my bones
 ----------------------------------------------------------------------------------------
 
-nl_command():
+-nl:
 
 one
 1  one
@@ -64,7 +64,7 @@ five
 Ctrl+D was pressed
 ------------------------------------------------------------------------------------------
 
-tail_command('artifacts/test.txt'):
+-tail test.txt:
 
 My patience is waning, is this entertaining?
 Our patience is waning, is this entertaining?
@@ -78,9 +78,9 @@ Go ahead and throw your stones
 'Cause there's magic in my bones
 ------------------------------------------------------------------------------------------
 
-tail_command('artifacts/test.txt', 'artifacts/test2.txt'):
+-tail test.txt test2.txt:
 
-==> artifacts/test.txt <==
+==> HW_1/artifacts/test.txt <==
 My patience is waning, is this entertaining?
 Our patience is waning, is this entertaining?
 
@@ -93,14 +93,14 @@ Go ahead and throw your stones
 'Cause there's magic in my bones
 
 
-==> artifacts/test2.txt <==
+==> HW_1/artifacts/test2.txt <==
 one
 two
 three, four, five
 six, seven
 ------------------------------------------------------------------------------------------
 
-tail_command():
+-tail:
 
 First things first
 I'ma say all the words inside my head
@@ -151,24 +151,24 @@ Pain! You made me a, you made me a
 Believer, believer
 ------------------------------------------------------------------------------------------
 
-wc_command('artifacts/test.txt'):
+-wc test.txt:
 
-46 219 1301 artifacts/test.txt
+46 219 1301 HW_1/artifacts/test.txt
 ------------------------------------------------------------------------------------------
 
-wc_command('artifacts/test2.txt'):
+-wc test2.txt:
 
-4 7 39 artifacts/test2.txt
+4 7 39 HW_1/artifacts/test2.txt
 ------------------------------------------------------------------------------------------
 
-wc_command('artifacts/test.txt', 'artifacts/test2.txt'):
+-wc test.txt test2.txt:
 
-46 219 1301 artifacts/test.txt
-4 7 39 artifacts/test2.txt
+46 219 1301 HW_1/artifacts/test.txt
+4 7 39 HW_1/artifacts/test2.txt
 50 226 1340 total
 ------------------------------------------------------------------------------------------
 
-wc_command()
+-wc:
 
 one two
 three four

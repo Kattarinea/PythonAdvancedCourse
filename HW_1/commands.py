@@ -1,8 +1,15 @@
 import keyboard
 from collections import deque
+from Paths_to_artifacts import PathsToArtifacts
 
 
-def nl_command(file=None):
+def nl_command(args):
+    if args.nl:
+        path_to_dir = PathsToArtifacts.PATH_TO_ARTIFACTS.value
+        file = path_to_dir + args.nl
+    else:
+        file = None
+
     if file:
         with open(file, 'r', encoding="utf-8") as f:
             count = 1
@@ -27,7 +34,11 @@ def nl_command(file=None):
             pass
 
 
-def tail_command(*files):
+def tail_command(args):
+    files = ''
+    if args.tail:
+        path_to_dir = PathsToArtifacts.PATH_TO_ARTIFACTS.value
+        files = [path_to_dir + file for file in args.tail]
     if not files:
         last_lines = deque(maxlen=17)
         try:
@@ -51,7 +62,11 @@ def tail_command(*files):
                 print('\n')
 
 
-def wc_command(*files):
+def wc_command(args):
+    files = ''
+    if args.wc:
+        path_to_dir = PathsToArtifacts.PATH_TO_ARTIFACTS.value
+        files = [path_to_dir + file for file in args.wc]
     if not files:
         count_lines = 0
         count_words = 0
