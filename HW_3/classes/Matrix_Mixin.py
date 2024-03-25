@@ -10,6 +10,9 @@ class MatrixMixin:
     def __hash__(self):
         return int(np.sum(self._matrix))
 
+    def __str__(self):
+        print(self._matrix)
+
     def save_matrix(self, file_name):
         np.savetxt(fname=file_name, X=self._matrix)
 

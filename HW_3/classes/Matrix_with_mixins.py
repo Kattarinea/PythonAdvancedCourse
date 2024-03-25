@@ -22,8 +22,6 @@ class MatrixWithMixins(MatrixMixin):
         else:
             raise TypeError('Unsupported operand types')
 
-    def __str__(self):
-        print(self._matrix)
 
     def __eq__(self, other):
         if isinstance(other, MatrixWithMixins):
